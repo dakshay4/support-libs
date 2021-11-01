@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+
+}
+
+group 'com.dakshay'
+version '0.0.1-SNAPSHOT'
+repositories {
+    mavenCentral()
+}
+
+
+targetCompatibility = 1.8
+tasks.named('jar') {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version)
+    }
+}
+
+dependencies {
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.dakshay.support-libs'
+            artifactId = 'exception-support'
+            version = '1.0.0'
+        }
+    }
+}
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,6 @@
+rootProject.name = 'support-libs'
+include 'exceptionSupport'
+include 'configurationSupport'
+include 'leetcode'
+include 'gojek-battleship'
+
